@@ -3,6 +3,7 @@ Adobe AIR SDK - Android
 
 # Version
 The ANE uses Everyplay's Android SDK v1.5.8 - June 13th 2017
+Minimum Adobe Air version is AIR 24
 
 # Information
 This is an Air Native Extension for Everyplay SDK, supporting Android-ARM only.
