@@ -1,8 +1,8 @@
-# EveryplayANE
+﻿# EveryplayANE
 Adobe AIR SDK - **Android**
 
 # Information
-Welcome to Everyplay. 
+Welcome to Everyplay.
 Everyplay uses Android SDKs as well as built-in device functionality to **capture your game's video and audio as it's played**.
 
 From the [FAQ](https://developers.everyplay.com/documentation/Frequently-asked-questions.md "Everyplay's FAQ")
@@ -37,4 +37,5 @@ Check out the replays already done with this ANE. [https://everyplay.com/colorpe
 # License
 Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html) with restrictions.
 Please see Everyplay Terms of Service at https://everyplay.com/developer-terms-of-service for more information.
+
 
