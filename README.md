@@ -37,3 +37,4 @@ Check out the replays already done with this ANE. [https://everyplay.com/colorpe
 # License
 Everyplay SDK is licensed under the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html) with restrictions.
 Please see Everyplay Terms of Service at https://everyplay.com/developer-terms-of-service for more information.
+
