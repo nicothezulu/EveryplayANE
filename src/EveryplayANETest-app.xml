@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/26.0">
+
+<!-- Adobe AIR Application Descriptor File Template.
+
+	Specifies parameters for identifying, installing, and launching AIR applications.
+
+	xmlns - The Adobe AIR namespace: http://ns.adobe.com/air/application/3.5
+			The last segment of the namespace specifies the version 
+			of the AIR runtime required for this application to run.
+			
+	minimumPatchLevel - The minimum patch level of the AIR runtime required to run 
+			the application. Optional.
+-->
+
+	<!-- A universally unique application identifier. Must be unique across all AIR applications.
+	Using a reverse DNS-style name as the id is recommended. (Eg. com.example.ExampleApplication.) Required. -->
+	<id>com.playcolorpeas.everyplayanetest</id>
+
+	<!-- Used as the filename for the application. Required. -->
+	<filename>EveryplayANETest</filename>
+
+	<!-- The name that is displayed in the AIR application installer. 
+	May have multiple values for each language. See samples or xsd schema file. Optional. -->
+	<name>EveryplayANETest</name>
+	
+	<!-- A string value of the format <0-999>.<0-999>.<0-999> that represents application version which can be used to check for application upgrade. 
+	Values can also be 1-part or 2-part. It is not necessary to have a 3-part value.
+	An updated version of application must have a versionNumber value higher than the previous version. Required for namespace >= 2.5 .
+    For iOS Apps, this represents build number. -->
+	<versionNumber>0.0.1</versionNumber>
+	
+	<!-- Settings for the application's initial window. Required. -->
+	<initialWindow>
+		<!-- The main SWF or HTML file of the application. Required. -->
+		<!-- Note: In Flash Builder, the SWF reference is set automatically. -->
+		<content>[This value will be overwritten by Flash Builder in the output app.xml]</content>
+		<aspectRatio>any</aspectRatio>
+		<depthAndStencil>true</depthAndStencil>
+		<autoOrients>true</autoOrients>
+        <fullScreen>true</fullScreen>
+        <visible>true</visible>
+        <renderMode>direct</renderMode>
+    </initialWindow>
+
+	
+	<icon>
+		<image16x16>AppIcons/everyplaytest16.png</image16x16>
+	    <image29x29>AppIcons/everyplaytest29.png</image29x29>
+	    <image32x32>AppIcons/everyplaytest32.png</image32x32>
+		<image36x36>AppIcons/everyplaytest36.png</image36x36>
+	    <image57x57>AppIcons/everyplaytest57.png</image57x57>
+	    <image72x72>AppIcons/everyplaytest72.png</image72x72>
+	    <image114x114>AppIcons/everyplaytest114.png</image114x114>
+	    <image128x128>AppIcons/everyplaytest128.png</image128x128>
+	    <image144x144>AppIcons/everyplaytest144.png</image144x144>
+	    <image152x152>AppIcons/everyplaytest152.png</image152x152>
+	    <image192x192>AppIcons/everyplaytest192.png</image192x192>
+	    <image512x512>AppIcons/everyplaytest512.png</image512x512>
+	    <image732x412>AppIcons/everyplaytest732.png</image732x412>
+	    <image1024x1024>AppIcons/everyplaytest1024.png</image1024x1024>
+	</icon> 
+ 
+ <allowBrowserInvocation>true</allowBrowserInvocation>
+
+<android>
+        <manifestAdditions><![CDATA[
+			<manifest android:installLocation="auto">
+			    <!--See the Adobe AIR documentation for more information about setting Google Android permissions-->
+			    <!--Removing the permission android.permission.INTERNET will have the side effect
+		of preventing you from debugging your application on your device-->
+			    <uses-permission android:name="android.permission.INTERNET"/>
+			    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+			    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>-->
+			    <!--The DISABLE_KEYGUARD and WAKE_LOCK permissions should be toggled together
+		in order to access AIR's SystemIdleMode APIs-->
+			    <!--<uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>-->
+			    <!--<uses-permission android:name="android.permission.WAKE_LOCK"/>-->
+			   
+			    <!-- comment the following part to remove microphone and camera recording -->
+			    <uses-feature android:name="android.hardware.camera" android:required="false"  />
+				<uses-feature android:name="android.hardware.camera.autofocus"  android:required="false" />
+				<uses-permission android:name="android.permission.CAMERA" />
+				<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+				
+			    <!--The ACCESS_NETWORK_STATE and ACCESS_WIFI_STATE permissions should be toggled
+		together in order to use AIR's NetworkInfo APIs-->
+			    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+			    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+				
+				<application android:hardwareAccelerated="true">
+					<activity
+					 android:name="com.everyplay.Everyplay.view.EveryplaySocialActivity" 
+					   android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
+					   android:theme="@android:style/Theme.NoTitleBar"
+					   android:windowSoftInputMode="adjustResize"
+					   android:screenOrientation="sensor"
+					   android:hardwareAccelerated="true" />
+
+					<activity
+					 android:name="com.everyplay.Everyplay.view.EveryplayTextInputActivity" 
+					   android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
+					   android:theme="@android:style/Theme.NoTitleBar"
+					   android:windowSoftInputMode="stateVisible|adjustResize"
+					   android:screenOrientation="sensor"
+					   android:hardwareAccelerated="false" />
+
+					<activity
+					 android:name="com.everyplay.Everyplay.view.videoplayer.EveryplayVideoPlayerActivity"
+					   android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
+					   android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+					   android:windowSoftInputMode="adjustResize"
+					   android:screenOrientation="sensor"
+					   android:hardwareAccelerated="true" />
+
+					<activity
+					 android:name="com.everyplay.Everyplay.view.videoplayer.EveryplayVideoEditorActivity"
+					   android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
+					   android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+					   android:windowSoftInputMode="adjustResize"
+					   android:screenOrientation="sensor"
+					   android:hardwareAccelerated="true" />
+
+					<activity
+					 android:name="com.everyplay.Everyplay.view.EveryplaySharingModalActivity"
+					   android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
+					   android:theme="@style/EveryplaySharingModal"
+					   android:windowSoftInputMode="adjustResize"
+					   android:screenOrientation="sensor"
+					   android:fitsSystemWindows="true"
+					   android:hardwareAccelerated="true" />
+
+					<activity
+					 android:name="com.everyplay.Everyplay.view.browser.EveryplayBrowserActivity"
+					   android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
+					   android:theme="@android:style/Theme.NoTitleBar"
+					   android:windowSoftInputMode="adjustResize"
+					   android:screenOrientation="sensor"
+					   android:hardwareAccelerated="false" />
+
+					<activity
+					 android:name="com.everyplay.Everyplay.view.auth.EveryplayAuthActivity"
+					   android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
+					   android:theme="@android:style/Theme.NoTitleBar"
+					   android:screenOrientation="sensor"
+					   android:hardwareAccelerated="false"
+					   android:windowSoftInputMode="adjustResize" />
+
+					<activity
+					 android:name="com.everyplay.Everyplay.view.auth.EveryplayAddConnectionActivity"
+					   android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
+					   android:theme="@android:style/Theme.Dialog"
+					   android:hardwareAccelerated="false"
+					   android:screenOrientation="sensor"
+					   android:windowSoftInputMode="adjustResize" />
+
+					<activity
+					 android:name="com.everyplay.Everyplay.communication.socialnetworks.EveryplayFacebook"
+					   android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
+					   android:theme="@android:style/Theme.Dialog"
+					   android:hardwareAccelerated="false"
+					   android:screenOrientation="sensor"
+					   android:windowSoftInputMode="adjustResize" />
+
+					<service android:name="com.everyplay.Everyplay.communication.upload.EveryplayUploadService" />
+
+				</application>
+				
+				
+			</manifest>
+			
+		]]></manifestAdditions>
+    </android>
+    <iPhone>
+        <InfoAdditions><![CDATA[
+			<key>UIDeviceFamily</key>
+			<array>
+				<string>1</string>
+				<string>2</string>
+			</array>
+		]]></InfoAdditions>
+        <requestedDisplayResolution>high</requestedDisplayResolution>
+    </iPhone>
+<extensions>
+        <extensionID>com.playcolorpeas.everyplay</extensionID>
+    </extensions>
+</application>

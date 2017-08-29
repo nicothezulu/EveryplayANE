@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:26341ebe7c44500d55e58257c3f9a89c:e452dedf852b3d3ed7d0a50ce2716ff9:628d44f20a20d4ab7a3617802fac7201$ -->
+<TextureAtlas imagePath="atlas.png" width="307" height="146">
+    <SubTexture name="button" x="260" y="2" width="45" height="45"/>
+    <SubTexture name="starling_rocket" x="2" y="2" width="256" height="142"/>
+</TextureAtlas>
