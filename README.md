@@ -22,6 +22,7 @@ Great for your users and even better for you - all the video game discovery, soc
 The ANE uses Everyplay's Android SDK v1.5.8 - June 13th 2017.  
 Minimum Adobe AIR version is AIR 24.  
 This is an AIR Native Extension for Everyplay SDK, **supporting Android-ARM only**.  
+
 *Please note that Everyplay has no official support for AIR anymore, this ANE is not officially supported.*  
 
 # Setup
